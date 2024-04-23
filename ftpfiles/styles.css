@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.student-card {
+  width: 300px;
+  border: 2px solid #007BFF;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+}
+
+.student-photo {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #007BFF;
+}
+
+.student-info h1 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.student-info p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
