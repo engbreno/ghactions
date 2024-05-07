@@ -2,19 +2,17 @@ name: Deploy to FTP
 on:
   push:
     branches:
-      - main  # Configura o workflow para executar no push para o branch main
+      - main
 jobs:
   ftp-deploy:
-    runs-on: ubuntu-latest  # Define o tipo de máquina virtual a ser usada
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2  # Faz checkout do código fonte
-
-    - name: Upload files to FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.3.1
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: './ftpfiles/'
-        
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Upload files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.1
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: "./ftpfiles/"
